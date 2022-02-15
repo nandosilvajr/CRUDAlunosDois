@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "jIuCRb0jkEHXcdd0cql7F1tT48s3FxOrbuyGWyytu4uNhnSi7WdwqSpWWQl4ady06vzC7I+J2IVaEMiD4KK74A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\35191\\source\\repos\\CRUDAlunosDois\\XamarinAlunos\\XamarinAlunos.iOS\\XamarinAlunos.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\35191\\.nuget\\packages\\material.icons\\1.0.76\\material.icons.1.0.76.nupkg.sha512",
+    "C:\\Users\\35191\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\35191\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\35191\\.nuget\\packages\\xamarin.communitytoolkit\\1.3.2\\xamarin.communitytoolkit.1.3.2.nupkg.sha512",
+    "C:\\Users\\35191\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\35191\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512",
+    "C:\\Users\\35191\\.nuget\\packages\\xamarin.forms.bootstrap.icons\\1.5.0\\xamarin.forms.bootstrap.icons.1.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

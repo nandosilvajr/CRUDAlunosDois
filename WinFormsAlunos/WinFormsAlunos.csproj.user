@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AdicionarAlunoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditarProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Professores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Turmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

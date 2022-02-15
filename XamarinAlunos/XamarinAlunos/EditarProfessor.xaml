@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAlunos.EditarProfessor">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Editar dados do Professor" HorizontalTextAlignment="Center" Style="{DynamicResource TitleStyle}" ></Label>
+            <Label Text="Id"  Style="{DynamicResource CaptionStyle}" ></Label>
+            <Editor Text="{Binding ProfessorEditar.ProfessorId}" IsEnabled="false"/>
+            <Label Text="Nome" Style="{DynamicResource CaptionStyle}"></Label>
+            <Editor Text="{Binding ProfessorEditar.Nome}"/>
+            <Label Text="Apelido" Style="{DynamicResource CaptionStyle}"></Label>
+            <Editor Text="{Binding ProfessorEditar.Apelido}"/>
+            <Button Text="Gravar" Command="{Binding AtualizarProfessorComando}" CommandParameter="{Binding ProfessorEditar.ProfessorId}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

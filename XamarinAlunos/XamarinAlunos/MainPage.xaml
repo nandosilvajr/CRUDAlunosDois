@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinAlunos"
+            xmlns:bi="clr-namespace:Xamarin.Forms.Bootstrap.Icons;assembly=Xamarin.Forms.Bootstrap.Icons"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+             
+             x:Class="XamarinAlunos.MainPage">
+    <TabbedPage.Children>
+        <local:Professores Title="Professores" IconImageSource="teach.png"/>
+
+        <ContentPage Title="Alunos" IconImageSource="student.png" >
+            <Grid VerticalOptions="StartAndExpand" Padding="25">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Alunos" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0"/>
+                <ListView x:Name="AlunosView" ItemsSource="{Binding AlunoMain}" Grid.Row="0"
+                          Margin="0 ,50, 0, 0"
+                          HorizontalOptions="Center"
+                        
+                          SelectedItem="{Binding AlunoSelecionado}">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >
+                                <StackLayout Orientation="Horizontal" Margin="5">
+                                    <Label Text="{Binding AlunoId}" 
+                                            HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                                    <Label Text="{Binding Nome}"
+                                            HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                                    <Label Text="{Binding Apelido}"
+                                            HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                <StackLayout  Grid.Row="1">
+
+                    <Editor x:Name="AlunoId" Placeholder="Id"  Text="{Binding AlunoId}" IsEnabled="false"/>
+                    <Editor x:Name="Nome" Placeholder="Nome" Text="{Binding AlunoNome}"/>
+                    <Editor x:Name="Apelido" Placeholder="Apelido" Text="{Binding AlunoApelido}" />
+                    <Button x:Name="btnAdicionar" Command="{Binding Adicionar}" Text="Adicionar"></Button>
+                    <Button x:Name="btnApagar" Command="{Binding RemoverAluno}" Text="Apagar"></Button>
+                    <Button x:Name="btnEditar" Command="{Binding EditarNavCommand}" Text="Editar"></Button>
+
+                </StackLayout>
+            </Grid>
+        </ContentPage>
+
+        <local:Turmas Title="Turmas">
+            <local:Turmas.IconImageSource>
+                <bi:IconSource Icon="People" Size="48"/>
+            </local:Turmas.IconImageSource>
+        </local:Turmas>
+
+        <local:Relatorios Title="Relatorios">
+            <local:Relatorios.IconImageSource>
+                <bi:IconSource Icon="Printer" Size="48"/>
+            </local:Relatorios.IconImageSource>
+        </local:Relatorios>
+
+    </TabbedPage.Children>
+
+</TabbedPage>

@@ -1,0 +1,10 @@
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\bin\Debug\netstandard2.0\Biblioteca.deps.json
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\bin\Debug\netstandard2.0\Biblioteca.dll
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\bin\Debug\netstandard2.0\Biblioteca.pdb
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.AssemblyInfo.cs
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.dll
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.pdb
+C:\Users\35191\source\repos\CRUDAlunosDois\CRUDAlunosDois\obj\Debug\netstandard2.0\Biblioteca.csproj.AssemblyReference.cache

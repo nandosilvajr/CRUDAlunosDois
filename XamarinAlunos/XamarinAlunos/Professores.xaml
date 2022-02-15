@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinAlunos.ViewModels"
+             x:Class="XamarinAlunos.Professores">
+    <ContentPage.BindingContext>
+        <viewModels:ProfessoresViewModel/>
+    </ContentPage.BindingContext>
+    <Grid VerticalOptions="StartAndExpand" Padding="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" >Professores</Label>
+        <ListView 
+            x:Name="ProfessoresView" ItemsSource="{Binding ProfessorMain}" Grid.Row="0"
+            SelectedItem="{Binding ProfessorSelecionado}"
+            Margin="0, 50, 0, 0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding ProfessorId}" 
+                                    HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                            <Label Text="{Binding Nome}"
+                                    HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                            <Label Text="{Binding Apelido}"
+                                    HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <StackLayout  Grid.Row="1">
+
+            <Editor x:Name="AlunoId" Placeholder="Id"  Text="{Binding ProfessorId}" IsEnabled="false"/>
+            <Editor x:Name="Nome" Placeholder="Nome" Text="{Binding ProfessorNome}"/>
+            <Editor x:Name="Apelido" Placeholder="Apelido" Text="{Binding ProfessorApelido}" />
+            <Button x:Name="btnAdicionar" Command="{Binding Adicionar}" Text="Adicionar"></Button>
+            <Button x:Name="btnApagar" Command="{Binding RemoverProfessor}" Text="Apagar"></Button>
+            <Button x:Name="btnEditar" Command="{Binding EditarNavCommand}" Text="Editar"></Button>
+        </StackLayout>
+    </Grid>
+</ContentPage>

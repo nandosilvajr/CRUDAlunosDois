@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinAlunos.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:bi="clr-namespace:Xamarin.Forms.Bootstrap.Icons;assembly=Xamarin.Forms.Bootstrap.Icons"
+             x:Name="ThisPage"
+             x:Class="XamarinAlunos.Turmas">
+    <ContentPage.BindingContext>
+        <viewModels:TurmaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="25,0,25,0">
+            <Label Text="Turmas" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+            <!-- Lista dos Alunos -->
+            <Label Text="Alunos" FontSize="Subtitle" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 10, 0, 0"></Label>
+            <ListView x:Name="AlunosView" ItemsSource="{Binding AlunoMain}" VerticalOptions="Center"
+                          Margin="0 ,10, 0, 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="1*"/>
+
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="dadosAluno"
+                                    Text="{Binding NomeCompleto}"  
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Padding="10, 0, 0, 0"
+                                    HorizontalOptions="Start"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalOptions="Center"/>
+
+                                <ImageButton
+                                    xct:IconTintColorEffect.TintColor="{Binding AdicionarButtonColor}"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Source="add.png"
+                                    Padding="0,0,10,0"
+                                    BackgroundColor="Transparent"                                    
+                                    Command="{Binding AdicionarAlunoComando}"  
+                                    CommandParameter="{Binding Source={x:Reference dadosAluno}, Path=BindingContext}" 
+                                    BindingContext="{Binding Source={x:Reference AlunosView}, Path=BindingContext}">
+                                </ImageButton>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Lista dos Professores -->
+
+            <Label Text="Professores" FontSize="Subtitle" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 10, 0, 0"></Label>
+
+            <ListView 
+            x:Name="ProfessoresView" ItemsSource="{Binding ProfessorMain}"
+            Margin="0, 15, 0, 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="1*"/>
+
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="dadosProfessor"
+                                        Text="{Binding NomeCompleto}"  
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Padding="10, 0, 0, 0"
+                                       HorizontalOptions="Start"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                                <ImageButton
+                                    xct:IconTintColorEffect.TintColor="{Binding AdicionarButtonColor}"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Source="add.png"
+                                    Padding="0,0,10,0"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding AdicionarProfessorComando}"  
+                                    CommandParameter="{Binding Source={x:Reference dadosProfessor}, Path=BindingContext}" 
+                                    BindingContext="{Binding Source={x:Reference ProfessoresView}, Path=BindingContext}">
+                                </ImageButton>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+            
+            <!-- Lista da Turma -->
+            <Label Text="Turma" FontSize="Subtitle" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0, 10, 0, 0">
+            </Label>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                    <!-- Lista dos Professores Turma -->
+                    <Label Text="Professores" FontSize="Default" FontAttributes="Bold" Padding="10,0,0,0" HorizontalTextAlignment="Center"></Label>
+                    <ListView 
+                        x:Name="ProfessoresTurmaView" ItemsSource="{Binding ProfessorTransaction}" 
+                        Margin="0, 5, 0, 0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*"/>
+                                            <ColumnDefinition Width="2*"/>
+
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="dadosProfessorTurma"
+                                            Text="{Binding NomeCompleto}" 
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Padding="10, 0, 0, 0"
+                                            HorizontalOptions="Start"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                                        <ImageButton
+                                            xct:IconTintColorEffect.TintColor="Red"
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            Source="remove.png"
+                                            Padding="0,0,10,0"
+                                            BackgroundColor="Transparent"
+                                            Command="{Binding RemoverProfessorTurmaComando}"  
+                                            CommandParameter="{Binding Source={x:Reference dadosProfessorTurma}, Path=BindingContext}" 
+                                            BindingContext="{Binding Source={x:Reference ProfessoresView}, Path=BindingContext}"
+                                            >
+                                        </ImageButton>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout>
+                    <!-- Lista dos Alunos Turma -->
+                    <Label Text="Alunos" FontSize="Default" FontAttributes="Bold" Padding="10,0,0,0" HorizontalTextAlignment="Center"></Label>
+                    <ListView x:Name="AlunosTurmaView" ItemsSource="{Binding AlunosTransaction}" VerticalOptions="Center"
+                          Margin="0 ,5, 0, 0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="dadosAlunoTurma"
+                                            Text="{Binding NomeCompleto}" 
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Padding="10, 0, 0, 0"
+                                            HorizontalOptions="Start"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalOptions="Center"/>
+                                        <ImageButton
+                                            xct:IconTintColorEffect.TintColor="Red"
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            Source="remove.png"
+                                            Padding="0,0,10,0"
+                                            BackgroundColor="Transparent"
+                                            Command="{Binding RemoverAlunoTurmaComando}"  
+                                            CommandParameter="{Binding Source={x:Reference dadosAlunoTurma}, Path=BindingContext}" 
+                                            BindingContext="{Binding Source={x:Reference AlunosTurmaView}, Path=BindingContext}">
+                                        </ImageButton>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+            <Button
+                    BorderRadius="25"
+                    Padding="30,0,25,0"
+                    Text="Criar Turma"
+                    TextColor="White"
+                    TextTransform="None"
+                    Margin="80,0,80,20"
+                Command="{Binding CriarTurmaComando}"
+                    BackgroundColor="DodgerBlue">
+                <Button.ImageSource>
+                    <bi:IconSource Icon="People" Size="18"/>
+                </Button.ImageSource>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
