@@ -1,36 +1,26 @@
 {
   "Version": 1,
   "ProjectMap": {
-    "349151d1-0195-46db-a6e8-5ac5ca26ced2": {
-      "ProjectGuid": "349151d1-0195-46db-a6e8-5ac5ca26ced2",
-      "DisplayName": "Biblioteca",
-      "ColorIndex": 0
-    },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
     },
-    "9a923159-acc2-4136-932b-f9de63daed04": {
-      "ProjectGuid": "9a923159-acc2-4136-932b-f9de63daed04",
-      "DisplayName": "WinFormsAlunos",
-      "ColorIndex": 1
+    "19a32a9c-0ebe-4cdd-9a97-d1f566b683ea": {
+      "ProjectGuid": "19a32a9c-0ebe-4cdd-9a97-d1f566b683ea",
+      "DisplayName": "XamarinAlunos",
+      "ColorIndex": 0
     },
     "7c05ae49-e2f3-4194-8a93-35d5a62e6481": {
       "ProjectGuid": "7c05ae49-e2f3-4194-8a93-35d5a62e6481",
       "DisplayName": "WinFormsAlunos",
+      "ColorIndex": 1
+    },
+    "349151d1-0195-46db-a6e8-5ac5ca26ced2": {
+      "ProjectGuid": "349151d1-0195-46db-a6e8-5ac5ca26ced2",
+      "DisplayName": "Biblioteca",
       "ColorIndex": 2
-    },
-    "f59125b2-2bcd-4161-b666-c64570540564": {
-      "ProjectGuid": "f59125b2-2bcd-4161-b666-c64570540564",
-      "DisplayName": "XamarinAlunos.Android",
-      "ColorIndex": 3
-    },
-    "19a32a9c-0ebe-4cdd-9a97-d1f566b683ea": {
-      "ProjectGuid": "19a32a9c-0ebe-4cdd-9a97-d1f566b683ea",
-      "DisplayName": "XamarinAlunos",
-      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 3
 }
